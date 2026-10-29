@@ -1,0 +1,39 @@
+name: HELLO-1 Node 24 supported-runtime verification
+on:
+  push:
+    branches:
+      - feat/hello-artifact-handoff
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout reviewed Hello source
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Select supported Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.1'
+      - name: Record and enforce exact runtime
+        run: |
+          node --version
+          npm --version
+          node -e 'if (process.versions.node !== "24.22.1") process.exit(1)'
+      - name: Check syntax, tests, and artifact build
+        run: npm run verify
+      - name: Export, copy, and independently pin received package
+        run: |
+          mkdir -p test-results
+          node scripts/transport.mjs export artifacts/17498c7bc08280b1bc2077d9ee302bdada8fb401192f2efce61f594ad2b236e8 test-results/hello-export sha256:17498c7bc08280b1bc2077d9ee302bdada8fb401192f2efce61f594ad2b236e8
+          cp -R test-results/hello-export test-results/hello-received
+          node scripts/transport.mjs verify test-results/hello-received sha256:17498c7bc08280b1bc2077d9ee302bdada8fb401192f2efce61f594ad2b236e8
+      - name: Verify tracked evidence index remains unchanged
+        run: |
+          git diff --check
+          git diff --exit-code -- evidence/step-a/artifact-index.json
