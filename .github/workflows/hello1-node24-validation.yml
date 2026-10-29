@@ -2,7 +2,11 @@ name: HELLO-1 Node 24 supported-runtime verification
 on:
   push:
     branches:
+      - main
       - feat/hello-artifact-handoff
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
