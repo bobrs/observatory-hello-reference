@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "applicationId": "observatory-hello-reference",
+  "sourceRevision": "a692f78dde502c00fbf7ec6b6f126476d0322ea5",
+  "sourceDirty": false,
+  "artifacts": [
+    {
+      "version": "1.0.0",
+      "artifactId": "sha256:53cfab8899f14848e3979a1afa2e41c12334fb05bccee5c55398d53598c04262",
+      "directory": "53cfab8899f14848e3979a1afa2e41c12334fb05bccee5c55398d53598c04262"
+    },
+    {
+      "version": "1.1.0",
+      "artifactId": "sha256:17498c7bc08280b1bc2077d9ee302bdada8fb401192f2efce61f594ad2b236e8",
+      "directory": "17498c7bc08280b1bc2077d9ee302bdada8fb401192f2efce61f594ad2b236e8"
+    },
+    {
+      "version": "1.2.0",
+      "artifactId": "sha256:7410f8f433f8d7668000a290b573df8873334ca1f4aadc4622c48b76610b199f",
+      "directory": "7410f8f433f8d7668000a290b573df8873334ca1f4aadc4622c48b76610b199f"
+    }
+  ]
+}

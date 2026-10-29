@@ -53,7 +53,7 @@ PLAYWRIGHT_BROWSERS_PATH=.cache/playwright npx playwright install chromium
 npm run demo
 ```
 
-The demo uses project-local Chromium and disposable packages, runs one version at a time, checks desktop/mobile rendering and `/version`, and saves screenshots plus a source-stamped report to ignored `test-results/demo/`. It stops its app/browser processes and removes temporary packages. Full evidence and exact tested revision are recorded in the feature PR. Developer evidence is not independent Test acceptance.
+The demo uses project-local Chromium and disposable packages, runs one version at a time, checks desktop/mobile rendering and `/version`, and saves screenshots plus a source-stamped report to ignored `test-results/demo/`. It stops its app/browser processes and removes temporary packages. [Committed evidence, artifact IDs and screenshots](evidence/step-a/README.md) identify their clean source; the feature PR records final-head verification. Developer evidence is not independent Test acceptance.
 
 ## Scope and provenance
 
