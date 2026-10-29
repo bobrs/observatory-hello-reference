@@ -32,6 +32,22 @@ This runs actual packaged app bytes after checking them against the index outsid
 
 The index is only as trusted as its reviewed/pinned source. For this unmerged local review it is locally built evidence, not independent acceptance. A later launcher must compare bytes against an approved digest **outside** the candidate package before executing it. Internal self-verification and `/version` alone do not attest their own code.
 
+## Workspace artifact handoff
+
+The transport tool uses only Node standard-library code from this checkout; it copies a verified directory without changing the six package files. It does not archive, publish, launch or approve a package. Use Node **24.22.1 or a supported newer 24.x patch**. The recipient needs a separately reviewed copy of this repository and an expected artifact ID supplied through an independently trusted channel. The committed [Step A evidence index](evidence/step-a/artifact-index.json) records the three developer-reviewed identities; it is not by itself an approved publisher identity.
+
+For a reproducible local example, first build packages from reviewed source with `npm run build`. Obtain the expected ID independently; the following example explicitly pins the 1.1.0 evidence digest, rather than using the generated index to choose it:
+
+```sh
+node scripts/transport.mjs export artifacts/17498c7bc08280b1bc2077d9ee302bdada8fb401192f2efce61f594ad2b236e8 test-results/hello-export sha256:17498c7bc08280b1bc2077d9ee302bdada8fb401192f2efce61f594ad2b236e8
+cp -R test-results/hello-export test-results/hello-received
+node scripts/transport.mjs verify test-results/hello-received sha256:17498c7bc08280b1bc2077d9ee302bdada8fb401192f2efce61f594ad2b236e8
+```
+
+Create `test-results` first if it does not exist; the export destination must not already exist. Copy the complete directory and preserve its files, not links. The verifier rejects a missing or malformed expected digest, changes, incorrect membership, links and mismatched identities before any package code executes. It reports the baked version and verified digest; neither the copied sidecar nor a generated local index establishes trust. The command uses reviewed verifier code from the receiver checkout, not code from the candidate. It assumes the local workspace is not being modified concurrently by an adversarial process.
+
+For promotion or rollback, retain and transfer the same previously accepted package bytes and externally pinned digest; do not rebuild an earlier package as part of promotion. The example build demonstrates reconstruction in a workspace, not release publication or an approved promotion. Lab must separately provide artifact retention and transport, trusted expected identity distribution, runtime prerequisites, target process control and independent observations. Those capabilities and their authorization are outside this workflow.
+
 ## Optional standalone context smoke check
 
 The default app has no destination/stage and says so. Optional context is launch metadata, not version or authority:
