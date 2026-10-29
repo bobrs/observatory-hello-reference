@@ -1,0 +1,17 @@
+{
+  "project": "Hello Observatory",
+  "version": "1.2.0",
+  "scope": "AO-INC-003A only: standalone local review plus repository/PR",
+  "repository": "https://github.com/bobrs/observatory-hello-reference",
+  "visibility": "public",
+  "branch": "feat/standalone-reference",
+  "implementation_source": "a692f78dde502c00fbf7ec6b6f126476d0322ea5",
+  "checks": { "syntax": "passed", "native_tests": "8 passed", "reproducibility": "passed", "external_digest_verification": "passed", "browser": "passed on macOS arm64 / Chromium", "typecheck": "not configured: plain JavaScript", "ci": "not configured: outside scope", "external_deployment": "not performed: outside scope" },
+  "evidence": "evidence/step-a/README.md",
+  "external_url": null,
+  "cloudflare_deployment_id": null,
+  "configured_secret_names": [],
+  "custom_domain": null,
+  "status": "Dev evidence submitted for PM/Sponsor review; merge not authorized",
+  "step_b": "not implemented; separate authorization required"
+}

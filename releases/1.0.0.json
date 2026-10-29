@@ -1,0 +1,6 @@
+{
+  "applicationId": "observatory-hello-reference",
+  "version": "1.0.0",
+  "greeting": "Hello, a small beginning.",
+  "accent": "#ffc9a1"
+}

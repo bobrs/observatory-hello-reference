@@ -1,0 +1,14 @@
+{
+  "name": "Hello Observatory",
+  "slug": "observatory-hello-reference",
+  "profile": "custom",
+  "profile_reason": "Tiny independently runnable Node HTTP reference application; no hosting/integration in Step A.",
+  "stage": "local-reference-review",
+  "github": { "owner": "bobrs", "repository": "observatory-hello-reference", "visibility": "public", "production_branch": "main" },
+  "cloudflare": { "target": null, "domain": null },
+  "authorization": { "step": "AO-INC-003A", "repository_and_pr": true, "local_run": true, "merge": false, "step_b": false, "external_deployment": false },
+  "required_secrets": [],
+  "version": "1.2.0",
+  "quality_gates": ["syntax", "native-tests", "reproducible-packages", "external-digest-verification", "standalone-browser-evidence"],
+  "contract_exceptions": ["No Wrangler/deploy/env-secret files: deployment tooling and real hosts are outside authorized scope.", "No deployed-project metadata: no external deployment exists; local review receipt records actual runs."]
+}
