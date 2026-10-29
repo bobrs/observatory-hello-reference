@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A tiny reference application with an unmistakable, verifiable release identity.">
+  <title>Hello Observatory · @@VERSION@@</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+  <main>
+    <header><a class="brand" href="/"><span class="orbit" aria-hidden="true"></span>Hello Observatory</a><span class="reference">An independent reference app</span></header>
+    <section class="hero" aria-labelledby="version">
+      <div class="release-label"><span class="dot" aria-hidden="true"></span> You are looking at release</div>
+      <h1 id="version" class="version">@@VERSION@@</h1>
+      <p class="hello">Hello, World<span class="accent">.</span></p>
+      <p class="greeting">@@GREETING@@</p>
+      <p class="context">@@CONTEXT@@</p>
+      <p class="context-detail">@@CONTEXT_DETAIL@@</p>
+    </section>
+    <section class="identity" aria-label="Artifact identity">
+      <div><p class="label">Same bytes. Same identity.</p><p class="short-id">sha256:@@SHORT_ID@@<span aria-hidden="true">…</span></p></div>
+      <a class="json-link" href="/version">Read version JSON <span aria-hidden="true">↗</span></a>
+    </section>
+    <details><summary>Artifact &amp; runtime details</summary><dl><dt>Full package identity</dt><dd>@@ARTIFACT_ID@@</dd><dt>Baked release</dt><dd>@@VERSION@@</dd><dt>Runtime boot</dt><dd>@@BOOT_ID@@</dd><dt>Evidence limit</dt><dd>Startup-verified package identity, reported by this process. Independent verification compares package bytes to an approved index outside the package. This page is not Test acceptance or a health attestation.</dd></dl></details>
+    <footer><p>Built to make versions visible.</p><p>Local review · No external services</p></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "name": "observatory-hello-reference",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "license": "CC0-1.0",
+  "engines": { "node": ">=24.22.1 <25" },
+  "scripts": {
+    "check": "node --check app/server.mjs && node --check app/identity.mjs && node --check scripts/package.mjs && node --check scripts/launch.mjs && node --check scripts/run.mjs",
+    "test": "node --test test/*.test.mjs",
+    "build": "node scripts/package.mjs",
+    "verify": "npm run check && npm test && npm run build",
+    "start": "node scripts/run.mjs 1.2.0",
+    "review": "node scripts/run.mjs",
+    "demo": "node scripts/capture-demo.mjs"
+  },
+  "devDependencies": { "playwright": "1.64.1" }
+}

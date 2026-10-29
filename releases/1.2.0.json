@@ -1,0 +1,6 @@
+{
+  "applicationId": "observatory-hello-reference",
+  "version": "1.2.0",
+  "greeting": "A visible next step.",
+  "accent": "#d6f59a"
+}
