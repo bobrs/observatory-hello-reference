@@ -48,6 +48,16 @@ Create `test-results` first if it does not exist; the export destination must no
 
 For promotion or rollback, retain and transfer the same previously accepted package bytes and externally pinned digest; do not rebuild an earlier package as part of promotion. The example build demonstrates reconstruction in a workspace, not release publication or an approved promotion. Lab must separately provide artifact retention and transport, trusted expected identity distribution, runtime prerequisites, target process control and independent observations. Those capabilities and their authorization are outside this workflow.
 
+### Export all three retained identities
+
+After `npm run build`, an operator can write the three fixed packages to a new local directory:
+
+```sh
+npm run export:retained -- /path/to/new-retained-export
+```
+
+The command checks the generated `artifacts/index.json` and each of its package bytes against all three IDs in the committed `evidence/step-a/artifact-index.json` before creating the destination. It refuses a missing/invalid build, a package or pin mismatch, or any existing destination (including a symlink). The export contains `packages/<version>/` with the package's six original files and an `index.json` listing relative file paths, sizes and SHA-256 digests. Artifact IDs remain unchanged. The index records the build source revision and dirty flag and labels custody as `reconstructed-from-reviewed-source`: these bytes were built again from this checkout, so this command does not establish continuous custody of previously retained release bytes or independent release approval. Review/pin the evidence index through a separate trusted process; the generated export index does not prove its own provenance.
+
 ## Optional standalone context smoke check
 
 The default app has no destination/stage and says so. Optional context is launch metadata, not version or authority:
