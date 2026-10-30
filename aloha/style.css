@@ -1,0 +1,13 @@
+:root { color-scheme: light; font-family: ui-rounded, "Avenir Next", Avenir, system-ui, sans-serif; color: #263552; background: #fff8d9; }
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 24px; background: radial-gradient(ellipse at 18% 15%, #fff 0, transparent 34%), linear-gradient(145deg, #fff8d9, #ffe9bc 62%, #ffd9c6); }
+.card { width: min(100%, 700px); padding: clamp(28px, 7vw, 64px); border: 1px solid #f2cf8a; border-radius: 28px; background: #fffdf5; box-shadow: 0 22px 70px #77532020; }
+.sun { width: 74px; height: 74px; display: grid; place-items: center; border-radius: 50%; background: #ffdc72; color: #75500a; font-size: 46px; }
+.eyebrow { margin: 28px 0 10px; color: #72521c; font-size: 12px; font-weight: 800; letter-spacing: .15em; }
+h1 { margin: 0; color: #263552; font-size: clamp(38px, 9vw, 68px); line-height: 1.06; letter-spacing: -.045em; }
+.welcome { margin: 16px 0 34px; color: #465671; font-size: 19px; line-height: 1.5; }
+.identity { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 12px; margin: 0; }
+.identity div { min-width: 0; padding: 13px 15px; border-radius: 13px; background: #fff4d1; }
+dt { color: #614918; font-size: 12px; font-weight: 750; }
+dd { margin: 5px 0 0; color: #263552; font-size: 14px; font-weight: 650; overflow-wrap: anywhere; }
+.footnote { margin: 24px 0 0; color: #4d5b72; font-size: 13px; line-height: 1.55; }

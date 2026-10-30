@@ -2,6 +2,10 @@
 
 A tiny independently runnable Node.js reference app with an unmistakable version banner and content-addressed packages. Public and CC0. **AO-INC-003A / Step A only**: no Observatory integration or destination/deployment manager.
 
+## Aloha second workload
+
+The small bright [Aloha reference](aloha/README.md) supplies a second application identity for Observatory UI and QA/Demo reference environments. It is standalone and does not manage destinations. Hello package bytes and pins remain unchanged. See [bounded task #9](https://github.com/bobrs/observatory-hello-reference/issues/9).
+
 ## Run locally
 
 Use Node **24.22.1 or a supported newer 24.x patch** and npm; `.node-version` pins the tested runtime.
