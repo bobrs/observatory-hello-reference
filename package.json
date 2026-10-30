@@ -6,9 +6,10 @@
   "license": "CC0-1.0",
   "engines": { "node": ">=24.22.1 <25" },
   "scripts": {
-    "check": "node --check app/server.mjs && node --check app/identity.mjs && node --check scripts/package.mjs && node --check scripts/launch.mjs && node --check scripts/run.mjs && node --check scripts/transport.mjs",
+    "check": "node --check app/server.mjs && node --check app/identity.mjs && node --check scripts/package.mjs && node --check scripts/launch.mjs && node --check scripts/run.mjs && node --check scripts/transport.mjs && node --check scripts/export-retained.mjs",
     "test": "node --test test/*.test.mjs",
     "build": "node scripts/package.mjs",
+    "export:retained": "node scripts/export-retained.mjs",
     "verify": "npm run check && npm test && npm run build",
     "start": "node scripts/run.mjs 1.2.0",
     "review": "node scripts/run.mjs",
