@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "applicationId": "observatory-aloha-reference",
+  "sourceRevision": "e49080f575e007689ce7dd1ce22de3c9c7395785",
+  "sourceDirty": true,
+  "artifacts": [
+    {
+      "version": "1.0.0",
+      "artifactId": "sha256:a5565ea89496151b96d7181e3ed3c796bdedd2df6788fd639632d54913200908",
+      "directory": "a5565ea89496151b96d7181e3ed3c796bdedd2df6788fd639632d54913200908"
+    }
+  ]
+}
