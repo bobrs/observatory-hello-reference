@@ -1,6 +1,6 @@
 # Hello Observatory
 
-A tiny independently runnable Node.js reference app with an unmistakable version banner and content-addressed packages. Public and CC0. **AO-INC-003A / Step A only**: no Observatory integration or destination/deployment manager.
+A tiny independently runnable Node.js reference app with an unmistakable version banner and content-addressed packages. Public and CC0. Hello and the small [Aloha reference](aloha/README.md) exercise Application Observatory; they do not own a destination/deployment manager. The original Step A description below is historical where superseded by the delegated alpha work.
 
 ## Aloha second workload
 
@@ -89,4 +89,4 @@ The demo uses project-local Chromium and disposable packages, runs one version a
 
 The Product Sponsor authorized this exact public CC0 repository and Step A in the Codex session following [Application Observatory Issue #7](https://github.com/bobrs/Application-Observatory/issues/7) and its [PM review](https://github.com/bobrs/Application-Observatory/issues/7#issuecomment-6485169603). [PROJECT.md](PROJECT.md) records this as an attributed Dev transcription, not separate authenticated GitHub role identity.
 
-Only the documentation/license baseline is accepted on `main`. This feature is for PM/Sponsor review; merge needs a separate Sponsor authorization. No registry/release publication, CI, deployment tooling, external hosting, privileged operations, unrelated applications, GhostSentry3 or Step B work is included. The Node runtime/OS and a malicious same-user process are outside the package-integrity boundary; this is not supply-chain attestation or a health guarantee.
+Accepted `main` now includes the Hello artifact handoff/export ([PR #5](https://github.com/bobrs/observatory-hello-reference/pull/5), [PR #8](https://github.com/bobrs/observatory-hello-reference/pull/8)) and the tiny Aloha workload ([PR #10](https://github.com/bobrs/observatory-hello-reference/pull/10)). [Aloha 1.0.0 retained bytes and acquisition index](https://github.com/bobrs/observatory-hello-reference/releases/tag/aloha-v1.0.0) were published by the delegated supervisor and downloaded/digest-verified. The broader Observatory UI and external runtime client remain separately owned participants; this repository does not run their operations. Older Step-A-only/unmerged gates describe their historical sessions, superseded within the bounded delegated alpha. No unrelated application or protected asset access is implied. The Node runtime/OS and a malicious same-user process are outside the package-integrity boundary; this is not supply-chain attestation or a health guarantee.
